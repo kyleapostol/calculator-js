@@ -55,7 +55,12 @@ function operatorButtonHandler(event){
 }
 
 function equalsButtonHandler(event){
-    //console.log('equalsButtonHandler is running');
+    calculation.push(stringNumberToPush);
+    console.log('this is inside the equalsButtonHandler; ', calculation);
+    if(stringNumberToPush.length > 0) {
+        stringNumberToPush = '';
+        console.log('New value of stringNumberToPush: ', stringNumberToPush);//should be empty
+    }    //console.log('equalsButtonHandler is running');
     //console.log(event);
 }
 var displayText;
