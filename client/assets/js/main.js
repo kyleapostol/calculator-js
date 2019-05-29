@@ -18,24 +18,36 @@ var stringNumberToPush = '';
 
 var calculationResult = null;
 
-
 function applyClickHandlers() {
-    $('#number-block').on('click', '.number', numberButtonHandler);
+    $('#number-block').on('click', '.number', numbersButtonHandler);
     $('#operator-column').on('click', '.operator',operatorButtonHandler);
     $('#equals').on('click', equalsButtonHandler);
 };
 
-function numberButtonHandler(event) {
-    console.log('numberButtonHandler is running');
-    console.log(event);
+var inputtedNumber = '';
+function numbersButtonHandler(event) {
+    inputtedNumber = $(event.currentTarget).find('p').text();
+    inputtedNumber = inputtedNumber + stringNumberToPush;
+    displayArray.push(inputtedNumber);
+    updateDisplay();
+    //console.log('displayArray value: ', displayArray);
+    
+    //console.log('inputtedNumber: ', inputtedNumber)
+    //console.log('numberButtonHandler is running');
+    //console.log(event);
 }
 
 function operatorButtonHandler(event){
-    console.log(event);
-    console.log('operatorButtonHandler is running');
+    //console.log(event);
+    //console.log('operatorButtonHandler is running');
 }
 
 function equalsButtonHandler(event){
-    console.log('equalsButtonHandler is running');
-    console.log(event);
+    //console.log('equalsButtonHandler is running');
+    //console.log(event);
+}
+var displayText;
+function updateDisplay() {
+    displayText = displayArray.join(''); //How does the '' concatenate the strings without spaces?
+    $('#display-text').text(displayText);
 }
