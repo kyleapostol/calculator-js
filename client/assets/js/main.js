@@ -37,7 +37,11 @@ function numbersButtonHandler(event) {
     //console.log(event);
 }
 
+var inputtedOperator = '';
 function operatorButtonHandler(event){
+    inputtedOperator = $(event.currentTarget).find('p').text();
+    console.log(inputtedOperator);
+    displayArray.push(inputtedOperator);
     //console.log(event);
     //console.log('operatorButtonHandler is running');
 }
