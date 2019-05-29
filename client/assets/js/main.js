@@ -27,7 +27,7 @@ function applyClickHandlers() {
 var inputtedNumber = '';
 function numbersButtonHandler(event) {
     inputtedNumber = $(event.currentTarget).find('p').text();
-    stringNumberToPush = inputtedNumber + stringNumberToPush;
+    stringNumberToPush = stringNumberToPush + inputtedNumber;
     displayArray.push(inputtedNumber);
     updateDisplay();
     //console.log('displayArray value: ', displayArray);
@@ -49,7 +49,7 @@ function operatorButtonHandler(event){
         console.log('New value of stringNumberToPush: ', stringNumberToPush);//should be empty
     }
    // console.log('stringNumberToPush: ', stringNumberToPush.length);
-    //console.log('This is the calculation array: ', calculation);
+    console.log('This is the calculation array: ', calculation);
     //console.log(event);
     //console.log('operatorButtonHandler is running');
 }
