@@ -43,8 +43,11 @@ function equalsButtonHandler(event){
     if(stringNumberToPush.length > 0) {
         stringNumberToPush = '';
         displayArray = [];
-      }    
-   
+      }   
+    
+    console.log('About to calculate:', calculation);
+    var answer = calculate(calculation[0],calculation[1],calculation[2]);
+    console.log('This is the answer variable: ', answer);
 }
 var displayText;
 function updateDisplay() {
@@ -52,7 +55,7 @@ function updateDisplay() {
     $('#display-text').text(displayText);
 }
 
-function calculate(num1,num2,operator){
+function calculate(num1,operator,num2){
     var number1 = parseFloat(num1);
     console.log(number1);
     var number2 = parseFloat(num2);
@@ -77,7 +80,45 @@ function calculate(num1,num2,operator){
     
  }
 
-console.log('calculate function: ', calculate(1,2,'+')); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
     
