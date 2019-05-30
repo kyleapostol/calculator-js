@@ -48,6 +48,8 @@ function equalsButtonHandler(event){
     console.log('About to calculate:', calculation);
     var answer = calculate(calculation[0],calculation[1],calculation[2]);
     console.log('This is the answer variable: ', answer);
+    displayArray.push(answer);
+    updateDisplay();
 }
 var displayText;
 function updateDisplay() {
